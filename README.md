@@ -86,7 +86,7 @@ is a serial bus interface connection protocol (two-wire interface).
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
 #include <WiFiClient.h>
-#include <Wire.h>
+#include <Wire.h> //for NodeMCU communicate with Uno
  ```
  ### NodeMCU side
  - connect the wifi
@@ -111,13 +111,34 @@ is a serial bus interface connection protocol (two-wire interface).
  - servo motor
  - vaccum
  
+ ### obstacle avoid use one ultrasonic and servo motor
+ <img src = "https://i.imgur.com/TvGM8OY.png" width="50%" height = "30%">
+ ultrasonic will be like eyes and detect whether there are obstacle, and servo motor will turn left (180 degree) and right (0 degree) to let it check.
+ 
+ ## Arduino Uno library
+ ```
+ #include <Wire.h>
+#include <NewPing.h>
+#include <Servo.h>
+#include <AFMotor.h>
+ ```
+ ### To approach the hotspot
+ idea: do the obstacle avoid first, check the wifi strength if over 85 will be test the which derection is more approach then move. 
+ - obstacle avoid function
+ - below wifi strength 85 (reverse)
+ - over 85 slowly approach
+ 
  ### what i have overcome 
   - four DC motors need `up to 9v` 
   At first i use 9v but it can not push the whole car with four motors.
-  So i use two battery case series connection create `12v`.
+  So i use two battery case series connection create `12v`. Then it can drive the four motors to move. 
+  
+  <img src="https://i.imgur.com/1CdrOkA.png" width ="30%" height ="20%">
+  > But these method have broke 3 battery packages thier GND wire all broke.
   
   
  ### Difficulty in Arduino Uno
+ > L293d motor shield
   The Right Front motors was turning too fast, and can not be adjust by the `setspeed`.
   Test it if is the motor problem or L293d motor shield problem: after testing it was the L293d M2 position problem.
   It can only adjust `stop` and `higher speed` (can not higher speed because other motor can not follow up it will turn out to be run the circle) 
