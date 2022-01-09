@@ -144,12 +144,19 @@ is a serial bus interface connection protocol (two-wire interface).
   It can only adjust `stop` and `higher speed` (can not higher speed because other motor can not follow up it will turn out to be run the circle) 
   
  ## Video
+ i forgot to record the website
+ 
+ <img src="https://i.imgur.com/Pr2FJL7.jpg" width ="30%">
+ 
+ 
  https://youtu.be/cyFD_qQukRg
  
  ## Reference
  wifi_signal: https://www.intuitibits.com/2016/03/23/dbm-to-percent-conversion/
  
  NodeMCU: https://randomnerdtutorials.com/esp8266-pinout-reference-gpios/
+ 
+ https://www.the-diy-life.com/arduino-based-obstacle-avoiding-robot-car/
  
  
 
