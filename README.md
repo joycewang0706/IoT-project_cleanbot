@@ -106,6 +106,13 @@ is a serial bus interface connection protocol (two-wire interface).
  ## Arduino UNO
  use Uno to control:
  - four DC motor
+ - ultrasonic
+ - servo motor
+ - vaccum
+ 
+ ### Difficulty in Arduino Uno
+ ## Video
+ https://youtu.be/cyFD_qQukRg
  
  ## Reference
  wifi_signal: https://www.intuitibits.com/2016/03/23/dbm-to-percent-conversion/
