@@ -105,17 +105,29 @@ is a serial bus interface connection protocol (two-wire interface).
  
  ## Arduino UNO
  use Uno to control:
+ - L293d motor shield
  - four DC motor
  - ultrasonic
  - servo motor
  - vaccum
  
+ ### what i have overcome 
+  - four DC motors need `up to 9v` 
+  At first i use 9v but it can not push the whole car with four motors.
+  So i use two battery case series connection create `12v`.
+  
+  
  ### Difficulty in Arduino Uno
+  The Right Front motors was turning too fast, and can not be adjust by the `setspeed`.
+  Test it if is the motor problem or L293d motor shield problem: after testing it was the L293d M2 position problem.
+  It can only adjust `stop` and `higher speed` (can not higher speed because other motor can not follow up it will turn out to be run the circle) 
+  
  ## Video
  https://youtu.be/cyFD_qQukRg
  
  ## Reference
  wifi_signal: https://www.intuitibits.com/2016/03/23/dbm-to-percent-conversion/
+ 
  NodeMCU: https://randomnerdtutorials.com/esp8266-pinout-reference-gpios/
  
  
