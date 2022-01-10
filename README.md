@@ -143,6 +143,18 @@ is a serial bus interface connection protocol (two-wire interface).
   Test it if is the motor problem or L293d motor shield problem: after testing it was the L293d M2 position problem.
   It can only adjust `stop` and `higher speed` (can not higher speed because other motor can not follow up it will turn out to be run the circle) 
   
+ ### Cleaning part
+ <img src="https://i.imgur.com/wXrmRjn.jpg" width ="30%">
+  <img src="https://i.imgur.com/aTABqVE.jpg" width ="30%">
+  
+ At first i dicomposed the mini vaccum. Try to use the motor to attacth on the L293d motor shield.
+ But there is no enough space for me to connect on it, so i try to connect 5V power and GND. When i connect it always `crash` my arduino.
+ So there are few solution:
+ 
+ - put battery directly in mini vaccum (I choose this one because of the deadline)
+ - use another motor driver connect on NodeMCU (Arduino is already full)
+ - use L293d M1 motor driver (means that i have to give up one wheel and adjust the turn degree) 
+  
  ## Video
  i forgot to record the website
  
